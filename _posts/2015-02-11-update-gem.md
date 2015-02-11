@@ -2,9 +2,9 @@
 layout: post
 title: Actualizar gem
 categories: ruby
-tags: ruby gem
+tags: ruby rubygems
 ---
-Para actualizar la versión del gem es necesarios ejecutar:
+Para actualizar la versión del rubygems es necesarios ejecutar:
 {% highlight bash %}
-gem update --system
+$ gem update --system
 {% endhighlight %}
