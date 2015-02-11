@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Comandos remotos de git
+categories: git
+tags: git remote
 ---
 
 * Añadir repositorio remoto

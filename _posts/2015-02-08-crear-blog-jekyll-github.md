@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Crear un site con jekyll y github
+categories: jekyll
+tags: github jekyll
 ---
 
 Si disponemos de un site en <code>jekyll</code>, github es una solución ideal para alojarla.
