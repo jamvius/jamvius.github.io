@@ -139,38 +139,31 @@ será un proceso web, que arranca el servidor. Heroku recomienda utilizar como s
 Para configurarlo tendremos que poner en el <code>Procfile</code>:
 
 {% highlight ruby %}
-web: bundle exec unicorn -p $PORT -c ./config/unicorn.rb
+web: bundle exec puma -C config/puma.rb
 {% endhighlight %}
 
 Añadir a <code>Gemfile</code>:
 {% highlight ruby %}
-gem 'unicorn'
+gem 'puma'
 {% endhighlight %}
 
-Y crear el archivo <code>./config/unicorn.rb</code> con:
+Y crear el archivo <code>./config/puma.rb</code> con:
 
 {% highlight ruby %}
-worker_processes Integer(ENV["WEB_CONCURRENCY"] || 3)
-timeout 15
-preload_app true
+workers Integer(ENV['WEB_CONCURRENCY'] || 2)
+threads_count = Integer(ENV['MAX_THREADS'] || 5)
+threads threads_count, threads_count
 
-before_fork do |server, worker|
-  Signal.trap 'TERM' do
-    puts 'Unicorn master intercepting TERM and sending myself QUIT instead'
-    Process.kill 'QUIT', Process.pid
-  end
+preload_app!
 
-  defined?(ActiveRecord::Base) and
-    ActiveRecord::Base.connection.disconnect!
-end
+rackup      DefaultRackup
+port        ENV['PORT']     || 3000
+environment ENV['RACK_ENV'] || 'development'
 
-after_fork do |server, worker|
-  Signal.trap 'TERM' do
-    puts 'Unicorn worker intercepting TERM and doing nothing. Wait for master to send QUIT'
-  end
-
-  defined?(ActiveRecord::Base) and
-    ActiveRecord::Base.establish_connection
+on_worker_boot do
+  # Worker specific setup for Rails 4.1+
+  # See: https://devcenter.heroku.com/articles/deploying-rails-applications-with-the-puma-web-server#on-worker-boot
+  ActiveRecord::Base.establish_connection
 end
 {% endhighlight %}
 
