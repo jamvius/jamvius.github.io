@@ -129,7 +129,8 @@ para visualizar nuestra app con <code>heroku open</code>
 </div>
 
 ## Opcional
-Posiblemente la primera vez que subamos una app a Heroku nos saldran algunos de los siguientes warnings: 
+Posiblemente la primera vez que subamos una app a Heroku nos saldran algunos de los siguientes warnings:
+
 - Definir version ruby: Esto se soluciona añadiendo al <code>Gemfile</code> la versión de ruby que utiliza nuestro código:
 {% highlight ruby %}
 ruby '2.2.1'
