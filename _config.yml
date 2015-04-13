@@ -10,7 +10,8 @@ relative_permalinks: true
 # Setup
 title:            DevNotes
 tagline:          'Apuntas y notas varias'
-description:      'by <a href="https://twitter.com/jamvius" target="_blank">@jamvius</a>'
+description:      'Bitácora tecnólogica. Rincón donde apunto las cosas que pruebo y aprendo.'
+# description:      'by <a href="https://twitter.com/jamvius" target="_blank">@jamvius</a>'
 url:              http://jamvius.github.io
 baseurl:          /
 
@@ -28,3 +29,7 @@ github:
 
 sass:
   style: :compressed
+
+twitter_username: jamvius
+github_username:  jamvius
+linkedin_username: jamartinezvillar
