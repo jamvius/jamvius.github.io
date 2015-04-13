@@ -142,6 +142,8 @@
 .social-media-list {
   list-style: none;
   margin-left: 0;
+  padding: 0;
+  text-align: center;
   li {
     display: inline;
     a {
@@ -165,6 +167,15 @@ $grey-color:       #000000;
 
     path {
       fill: $grey-color;
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  .icon {
+    > svg {
+      width: 24px;
+      height: 24px;
     }
   }
 }
