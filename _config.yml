@@ -1,11 +1,10 @@
 # Dependencies
-#markdown:         redcarpet
 markdown:         kramdown
-highlighter:      pygments
+highlighter:      rouge
 
 # Permalinks
 permalink:        pretty
-relative_permalinks: true
+#relative_permalinks: true
 
 # Setup
 title:            DevNotes
@@ -27,8 +26,10 @@ github:
   repo:           https://github.com/jamvius
 
 sass:
-  style: :compressed
+#  style: :compressed
 
 twitter_username: jamvius
 github_username:  jamvius
 linkedin_username: jamartinezvillar
+
+gems: ['jekyll-paginate','jekyll-sitemap','jekyll-seo-tag']

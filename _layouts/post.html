@@ -5,6 +5,12 @@ layout: default
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }}</span>
+  <p>
+    {% for tags in page.tags %}
+    <code>{{ tags }}</code>
+    {% endfor %}
+  </p>
+
   {{ content }}
 </div>
 
