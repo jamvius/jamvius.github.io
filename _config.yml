@@ -32,4 +32,16 @@ twitter_username: jamvius
 github_username:  jamvius
 linkedin_username: jamartinezvillar
 
-gems: ['jekyll-paginate','jekyll-sitemap','jekyll-seo-tag']
+jekyll-archives:
+  enabled: all
+  layout: 'archive'
+  layouts:
+    year: 'year-archive'
+    month: 'month-archive'
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
+
+gems: ['jekyll-paginate','jekyll-sitemap','jekyll-seo-tag','jekyll-archives']
