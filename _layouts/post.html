@@ -5,9 +5,15 @@ layout: default
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }}</span>
-  <p>
+  <p><strong>categorias:</strong>
+    {% for category in page.categories %}
+    <a href="/archive/category/{{category}}" class="tag">{{ category }}</a>
+    {% endfor %}
+
+  </p>
+  <p><strong>tags:</strong>
     {% for tags in page.tags %}
-    <code>{{ tags }}</code>
+    <a href="/archive/tag/{{tags}}" class="tag">{{ tags }}</a>
     {% endfor %}
   </p>
 

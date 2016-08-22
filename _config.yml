@@ -33,15 +33,15 @@ github_username:  jamvius
 linkedin_username: jamartinezvillar
 
 jekyll-archives:
-  enabled: all
+  enabled:
+    - categories
+    - tags
   layout: 'archive'
   layouts:
-    year: 'year-archive'
-    month: 'month-archive'
+    year: year-archive
+    month: month-archive  
   permalinks:
-    year: '/:year/'
-    month: '/:year/:month/'
-    tag: '/tag/:name/'
-    category: '/category/:name/'
+    tag: '/archive/tag/:name/'
+    category: '/archive/category/:name/'
 
-gems: ['jekyll-paginate','jekyll-sitemap','jekyll-seo-tag']
+gems: ['jekyll-paginate','jekyll-sitemap','jekyll-seo-tag','jekyll-archives']
