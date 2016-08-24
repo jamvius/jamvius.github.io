@@ -24,7 +24,8 @@ github:
 sass:
 #  style: :compressed
 
-linkedin_username: jamartinezvillar
+linkedin:
+  username: jamartinezvillar
 
 twitter:
   username: jamvius
@@ -42,7 +43,7 @@ jekyll-archives:
     category: '/archive/category/:name/'
 
 gems: 
-  - 'jekyll-paginate'
-  - 'jekyll-sitemap'
-  - 'jekyll-seo-tag'
-  - 'jekyll-archives'
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-archives

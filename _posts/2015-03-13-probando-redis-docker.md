@@ -1,3 +1,12 @@
+---
+layout: post
+title: probando redis desde docker
+categories: sysop
+tags: redis comandos docker
+---
+
+Una de las grandes virtudes de docker, es que permite probar tecnologias sin necesidad de "guarrear" nuestra máquina.
+Para arrancar redis desde docker, simplemente hay que ejecutar:
 docker run -d -p 6379:6379 redis:2.8.17
 redis-cli -h $(boot2docker ip): conectar a un redis en docker (si se ha mapeado el puerto del redis a fuera)
 
