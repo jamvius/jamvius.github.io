@@ -63,5 +63,5 @@ $ rm -rf archive | cp _site/archive .
 {% endhighlight %}
 
 <div class="note warning">
-<p>Con este proceso, ya que tenemos dos fuentes (la carpeta copiada y el plugin archives) que generan en la misma ubicación <code>_sites/archive</code> es necesario borrar la carpeta archive antes de arrancar el servidor en local para evitar conflictos</p>
+<p>Con este proceso, ya que tenemos dos fuentes (la carpeta copiada y el plugin archives) que generan en la misma ubicación <code>_sites/archive</code> es necesario borrar la carpeta <code>./archive</code> antes de arrancar el servidor en local para evitar conflictos</p>
 </div>
