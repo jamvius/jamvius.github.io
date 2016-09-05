@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Empezando con django
-description: Resumen del tutorial oficial del django
+title: Empezando con django (I)
+description: Resumen del tutorial oficial del django (I)
 categories: python
 tags: django tutorial
 ---
@@ -26,3 +26,34 @@ $ cd mysite
 $ python manage.py startapp polls
 {% endhighlight %}
 
+Para crear una vista, hay que añadir al <code>polls/views.py</code>
+
+{% highlight python %}
+from django.http import HttpResponse
+
+def index(request):
+    return HttpResponse("Hello, world. You're at the polls index.")
+{% endhighlight %}
+
+y crear <code>polls/urls.py</code>
+
+{% highlight python %}
+from django.conf.urls import url
+from . import views
+
+urlpatterns = [
+    url(r'^$', views.index, name='index'),
+]
+{% endhighlight %}
+
+y añadir al archivo <code>mysite/urls.py</code> 
+
+{% highlight python %}
+from django.conf.urls import include, url
+from django.contrib import admin
+
+urlpatterns = [
+    url(r'^polls/', include('polls.urls')),
+    url(r'^admin/', admin.site.urls),
+]
+{% endhighlight %}
