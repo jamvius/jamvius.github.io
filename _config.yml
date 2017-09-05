@@ -43,4 +43,4 @@ gems:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-archives
+#  - jekyll-archives
